@@ -1,18 +1,24 @@
 <html>
 <head>
-    <title>Nebula</title>
+    <title>HW IoT Demo Page</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta content="text/javascript" http-equiv="content-script-type" />
     <meta content="text/css" http-equiv="content-style-type" />
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<style>
+	#timeCount {
+		text-align: center;
+	}
+
 	.switch {
 	  position: relative;
-	  display: inline-block;
-	  width: 60px;
-	  height: 34px;
+	  display: block;
+	  width: 120px;
+	  height: 68px;
+	  margin: 60px auto;
+	  text-align: center;
 	}
 
 	.switch input {display:none;}
@@ -32,10 +38,10 @@
 	.slider:before {
 	  position: absolute;
 	  content: "";
-	  height: 26px;
-	  width: 26px;
-	  left: 4px;
-	  bottom: 4px;
+	  height: 52px;
+	  width: 52px;
+	  left: 8px;
+	  bottom: 8px;
 	  background-color: white;
 	  -webkit-transition: .4s;
 	  transition: .4s;
@@ -61,14 +67,14 @@
 	}
 	
 	.switchOn:before {
-	  -webkit-transform: translateX(26px);
-	  -ms-transform: translateX(26px);
-	  transform: translateX(26px);
+	  -webkit-transform: translateX(52px);
+	  -ms-transform: translateX(52px);
+	  transform: translateX(52px);
 	}	
 
 	/* Rounded sliders */
 	.slider.round {
-	  border-radius: 34px;
+	  border-radius: 68px;
 	}
 
 	.slider.round:before {
