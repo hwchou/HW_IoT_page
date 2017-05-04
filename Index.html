@@ -83,7 +83,7 @@
 	</style>	
 	<script>
 	$(function () {	
-        $.getJSON("http://api.thingspeak.com/channels/265909/fields/1.json?results=1&callback=?", {results: 1})
+        $.getJSON("https://api.thingspeak.com/channels/265909/fields/1.json?callback=?", {results: 1})
 		.done(function (data) {
 			console.log(data.feeds[0].field1);
 			if(data.feeds[0].field1 == "1"){
