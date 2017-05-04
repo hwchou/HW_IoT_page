@@ -100,11 +100,11 @@
 		
 		$("#btn").click(function() {
 			if($(this).hasClass("switchOn")){
-				$.ajax({
-					url: "http://api.thingspeak.com/update?api_key=M50JMAWFZJBDIGPI&field1=0",
-					type: "GET",
-					contentType: "application/json;charset=utf-8"
-				}).done(function (data) {
+				$.getJSON("https://api.thingspeak.com/update?callback=?", {
+					api_key: "M50JMAWFZJBDIGPI",
+					field1: 0
+				})
+				.done(function (data) {
 					console.log(data);
 					if(data != "0") {
 						$("#btn").removeClass("switchOn");
@@ -113,11 +113,11 @@
 				});
 			}
 			else {
-				$.ajax({
-					url: "http://api.thingspeak.com/update?api_key=M50JMAWFZJBDIGPI&field1=1",
-					type: "GET",
-					contentType: "application/json;charset=utf-8"
-				}).done(function (data) {
+				$.getJSON("https://api.thingspeak.com/update?callback=?", {
+					api_key: "M50JMAWFZJBDIGPI",
+					field1: 1
+				})				
+				.done(function (data) {
 					console.log(data);
 					if(data != "0") {
 						$("#btn").addClass("switchOn");
