@@ -99,8 +99,8 @@
         });		
 		
 		$("#btn").click(function() {
-			if($(this).hasClass("switchOn")){
-				$.getJSON("https://api.thingspeak.com/update?callback=?", {
+			if($("#btn").hasClass("switchOn")){
+				$.getJSON("https://api.thingspeak.com/update?callback=bar?", {
 					api_key: "M50JMAWFZJBDIGPI",
 					field1: 0
 				})
@@ -113,7 +113,7 @@
 				});
 			}
 			else {
-				$.getJSON("https://api.thingspeak.com/update?callback=?", {
+				$.getJSON("https://api.thingspeak.com/update?callback=bar?", {
 					api_key: "M50JMAWFZJBDIGPI",
 					field1: 1
 				})				
